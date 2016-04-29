@@ -1,0 +1,367 @@
+*{margin: 0px;padding: 0px;}
+body{font-family:"Microsoft YaHei",微软雅黑;background: #EFEFEF;font-size: 16px;}
+a{text-decoration: none;}
+input{border: 1px solid #0F7F87;width: 80px;}
+input:focus{border: 1px solid #00FFD2;}
+table{border-bottom: 2px solid #DBDBDB;color:#5D5D5D; }
+hr{width: 80%;
+	margin: 15px 0px 10px 15px;
+	height: 3px;
+	color: #11F5FE;
+
+}
+textarea{border: 1px solid #D2D2D2;color: #E07906;font-size: 18px;}
+textarea:focus{border: 1px solid #00FFD2;}
+.txt-shuoming{width: 210px;}
+/*=======================
+************************
+======================*/
+#top{font-size: 40px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	color: #FFF;
+	overflow: hidden;
+	position: relative;
+	background: #60E9DA;
+}
+/*显示 用户名 用户id 和 注销*/
+.usermessage{width: 280px;
+height:35px;
+/*border: 1px solid red;*/
+position: absolute;
+color: #B684C3;
+background: #60E9DA;
+right: 5%;
+top:43px; 
+font-size: 12px;
+line-height: 35px;
+}
+.usermessage span{display: block;
+float: left;
+
+margin-left: 15px;
+}
+.usermessage span button{background: #79F2B2;
+	color: #B684C3;
+	-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+}
+.usermessage span button:hover{background: #D7ECE1;color: #F056CD;}
+/*================*/
+#course_list{
+	width: 180px;
+	height: auto;
+	position: fixed;
+	-moz-box-shadow:2px 2px 5px #333333; 
+	-webkit-box-shadow:2px 2px 5px #333333;
+	 box-shadow:2px 2px 5px #333333;
+	 -moz-border-radius:10px; 	-webkit-border-radius:10px; border-radius:10px;
+	 left: 20px;
+	 top: 20%;
+}
+/*========*/
+#c_list{
+	list-style: none;
+	text-align: center;
+	font-size: 16px;/*24*/
+	background: #E9E9E9;
+	/*position: relative;   修改*/
+}
+#c_list li p{color: #7E7E7E ;overflow: hidden;height: 25px;}
+#c_list li{
+	border-bottom: 1px dashed #C3C3C3;
+	display: block;
+	color: #BABABA;
+	cursor: pointer;
+	/*-moz-border-radius:10px; 	-webkit-border-radius:10px; border-radius:10px;*/
+	text-align: center;
+	line-height: 25px;
+	/*padding-top: 8px;
+	padding-bottom: 8px;*/
+
+	}
+	#c_list li span{height: 25px;margin-top: 0px;}
+/*#c_list li:hover span{
+	background: #FFF;
+	color: #7DF8E2;
+	overflow: hidden;
+}*/
+/*#c_list li:hover span{display: block; }*/
+/*
+#c_list li ul{display: none;position:absolute;left: 180px;float: right;}
+#c_list li ul li{display: block;background: #FFF; color: #7DF8E2;}
+#c_list li:hover ul{display: block;}
+#C_lsit li:hover ul li{color: black;}*/
+/*************************
+==========================
+****************************/
+#r_box{
+	position: absolute;
+	right: 50px;   /* 没注释掉*/
+	top: 85px;/*130*/
+	width: 80%;/*80%*/
+	height: auto;
+	border: 1px solid #BDBDBD;
+	 -moz-border-radius:10px; 	-webkit-border-radius:10px; border-radius:10px;
+}
+.homepage{font-size: 24px;
+color: #FFB3B3;
+}
+#header{
+	width: 800px;/*加首页800px  400*/
+	height: 50px;
+	position: relative;
+	margin: 5px 0px 5px 150px;
+}
+#header ul{list-style: none;}
+#header ul li{
+	display: block;
+	float: left;
+	width: 125px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid #5D5D5D;
+	margin: 1px;
+	font-size: 24px;
+	color: #7E7E7E;
+	background: #E9E9E9;
+	-moz-border-radius:5px; 	-webkit-border-radius:5px; border-radius:5px;
+	cursor: pointer;
+}
+#header ul li:hover{
+	background: #FFF;
+	color: #D1D1D1;
+	font-size: 30px;	
+}
+/******************
+===================
+********************/
+.box{
+	width: 75%;
+	height: auto;
+	position: relative;
+	border: 1px solid #BDBDBD;
+	margin: 15px 0px 0px 50px;
+	-moz-border-radius:5px; 	-webkit-border-radius:5px; border-radius:5px;
+	background: #FFF;
+	display: none;
+}
+#c_name{display: block;margin: 5px 0px 0 120px;color: #B1B17F;}
+/**********************
+按钮组件
+*********************/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.btn-default {
+  color: #333;
+  background-color: #D8D897;
+  border-color: #ccc;
+}
+.btn-default:hover{
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-primary:hover{
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+/*****************************
+表单控件
+*******************************/
+.form-control{margin-left: 100px;position: relative;}
+/*===========================
+表格组件
+*****************************/
+
+
+/*=============================
+
+===============================*/
+#constitute{
+	position: relative;
+	margin: 5px 0px 0px 50px;
+	width: 80%;
+}
+.add{position: relative;display: block;float: right;}
+/*
+建立主表单 表格
+*/
+.t{
+border: 1px solid #FFF;
+padding: 5px;
+margin: 5px;
+}
+
+#bar-list{color: #5D5D5D;
+	position: relative;
+	display: block;
+	text-align: center;
+	left: -100px;
+}
+#bar-list span{margin-left: 100px }
+
+.tab_built tr td{
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border-bottom: 1px dashed black;
+	text-align: center;
+}
+.tab_built tr td input{text-align: center;}
+.tab_built tr td textarea{
+	min-width: 320px;
+	max-width: 320px;
+	min-height: 70px;
+	max-height: 70px;
+	display: block;
+}
+/*文本域*/
+.txt{min-width: 320px;
+	max-width: 320px;
+	min-height: 70px;
+	max-height: 70px;
+	color: black;
+	border: 1px solid #D2D2D2;
+	display: block;
+}
+.txt:focus{border: 1px solid #00FFD2;}
+/*加分项*/
+#add-score{
+	position: relative;
+	margin: 5px 0px 0px 50px;
+	width: 80%;
+}
+/*一票否决**/
+#say-no{
+	position: relative;
+	margin: 5px 0px 0px 50px;
+	width: 80%;
+}
+.tt tr td{width: 220px;}
+/*执行*/
+/*组成项列表  color: #B3B3B3;*/
+.run-box{display: none;}
+.run_div{border: 1px dashed #5D5D5D;}
+.run-list li{
+	list-style: none;
+	color: #4D4D4D;
+}
+
+.run-l li{list-style: none;
+	color: #B3B3B3;
+	width: 80px;
+	text-align: center;
+}
+.run-l{
+	margin-left: 20px;
+	border-right: 2px solid #AEAE65;
+}
+.run-al{display: inline-table;
+}
+.run-l:hover{
+	background: #D88E45;
+	cursor: pointer;
+}
+.run-l:hover li{color: #fff;}
+.run_p{display: inline-block;
+	margin-left: 15px;
+	border: 1px solid #C68D8D;
+	width: 52px;
+	-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
+	cursor: pointer;
+	text-align: center;
+}
+.run_p:hover{
+	background: #D88E45;
+}
+.run_p span{display: block;
+width: 50px;
+height: 25px;
+text-align: center;
+color: #5A709C;
+}
+.runrunp:hover span{color: #fff;}
+/*作业评定-----评审*/
+.work{margin: 8px;border: 1px solid #FFF;padding: 5px;color: #B3B3B3;overflow: hidden;}
+.work-input{margin: 5px;}
+.input_border{border:80px;width: 80px;}
+.max_score{color: #B3B3B3;border: 0px;}
+.workScore{border: 0px}
+.workPersent{border: 0px}
+.stu_score{width:30px;}
+.kaoqin{margin: 8px;border: 1px solid #FFF;padding: 5px;color: #B3B3B3;}
+.kaoqin-btn{display: block;
+	position: relative;
+	left: 380px;
+	margin-top: 5px;
+}
+.dabian-cj{display: block;
+	position: relative;
+	left: 100px;
+}
+.dabian{margin: 8px;border: 1px solid #FFF;padding: 5px;color: #B3B3B3;}
+.dabian-xiangmu{display: block;
+	position: relative;
+	left: 135px;
+}
+.dabian-timu{display: block;
+	position: relative;
+	left: 235px;
+	color: #B3B3B3;
+}
+.dabian-person-group{
+	display: block;
+	position: relative;
+	left: 20px;
+}
+.place{margin-left: 111px;}
+.pingshentuan{
+	float: left;
+	width: 100px;
+	height: 150px;
+	border: 1px solid #E07906;
+	margin-left: 25px;
+	padding: 5px;
+}
+.pingshentuan-bili{float: left;
+	width: 130px;
+	height: 150px;	
+	border: 1px solid #FFF;
+	margin-left: 25px;
+	padding: 5px;
+}
+.pingshentuan-btn{margin: 2px;
+	margin-top: 20px;}
+.dabian-tea-stu{
+	display: block;
+}
+.dabian-tea-stu span{margin-left: 120px;}
+.dabian-btn{display: block;}
+.dabian-pingshen{width: 80%;
+	margin:5px;
+	padding: 5px;
+	border: 1px solid #FFF;
+}
+.dabian-p span{margin: 35px;}
+/*隐藏作业提交btn按钮组件*/
+.work_btn_bar{display: none;}

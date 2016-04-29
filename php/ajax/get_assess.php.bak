@@ -1,0 +1,11 @@
+<?php
+require_once'../include.php';
+  //$test=$_POST["tclass_no"];
+  $test=$_POST;
+	//$i=select('v_assess','DD_Cexplain_name,Cexplain_time,Cexplain_proportion,Cexplain_explain',"Tclass_no='A01905642'",$D);
+	$i=select('v_assess','DD_Cexplain_name,Cexplain_time,Cexplain_proportion,Cexplain_explain',"Tclass_no='$test[tclass_no]'",$D);
+  $arr=json_encode($i);
+	//print_r($i);
+  echo $arr;
+	
+?>

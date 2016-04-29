@@ -1,0 +1,23 @@
+<?php
+require_once"./include.php";
+$a=$_POST;
+// print_r($a);
+if($a['act']=='baocun'&&$a['obj']==1){
+	creat_jbzc($a,$D);//
+}else{if($a['act']=='xiugai'&&$a['obj']==1){
+	updata_jbzc($a,$D);
+}else{if($a['act']=='shanchu'&&$a['obj']==1){
+	delete_jbzc($a,$D);
+}else{if($a['act']=='baocun'&&$a['obj']==2){
+	creat_jfx($a,$D);
+}else{if($a['act']=='xiugai'&&$a['obj']==2){
+	updata_jfx($a,$D);
+}else{if($a['act']=='shanchu'&&$a['obj']==2){
+	delet_jfx($a,$D);
+}else{}
+}
+}	
+}
+}
+}
+?>

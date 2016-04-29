@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>重庆邮电大学教学过程管理系统V0.71</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="重庆邮电大学教学过程管理系统是重邮通信学院通信软件基础课程的练习作品，涵盖了教师上课和学生学习过程中的评价过程，目的是帮助师生更好的互动，提高教学效果。">
+	  <meta name="Keywords" content="教学过程、重庆邮电大学、通信软件基础">
+	  <link rel="stylesheet" type="text/css" href="css/in.css">  
+</head>
+<body>
+<div id="top">重庆邮电大学教学过程管理系统V0.71
+<div class="usermessage">
+	<span class="username">重庆邮电</span>
+	<span class="userid">重庆邮电</span>
+	<span class="zhuxiao"><button type="button" class="zhuxiaobtn">重新登录</button></span>
+</div>
+</div>
+<div id="course_list">
+<ul id="c_list">
+<!--<li>1123esdedsadsad<ul><li>aaaaaaaaaaaaaaaaaaaaaa</li></ul></li>
+<li>2dsadsadsadsa <ul><li>bdsadsadsadsa</li></ul></li>
+<li>3dsadsadsadsa<ul><li>cdasdsadsadsa</li></ul><f/li>
+<li>4dasdsadsadsadsa <ul><li>ddsadsadsadsad</li></ul></li>-->
+</ul>
+</div>
+<div id="r_box">
+	<div id="header">
+		<ul>
+			<li>首页</li>
+			<li>建立</li>
+			<li>执行</li>
+			<li>结果</li>
+		</ul>
+	</div>
+	<span id="c_name">课程</span>
+	<!--*****************************首页*************************-->
+	<div class="box shouye">
+		<div class="t homepage">
+			已经发布的信息：
+		</div>
+		<div id="constitute">
+			<button type="button" class="btn btn-default " id="xxx" >+</button>
+			<span>信息</span>
+			<button type="button" id="xxx" class="btn btn-primary add">添加</button>
+		</div>
+<!--=============================动态创建======================================================
+		
+			<div class="t homepagemes">
+				sadsadsadsad
+			</div>
+		
+=================================动态创建==================================================-->
+	</div>
+	<!--*********************************建立*****************************-->
+	<div  class="box">
+		<div id="constitute">
+			<button type="button" class="btn btn-default " id="toggle_jbzc" >+</button>
+			<span>基本组成</span>
+			<button type="button" id="add-1" class="btn btn-primary add">添加</button>
+		</div>
+		<div class="t divjbzc">
+			<form id="b-1" class="form-control fc">
+				<table class="tab tab_built jbzc"> <!---->
+					<tr><td>组成项</td><td>性质</td><td>比例</td><td>次数</td>
+					<td>
+						操作
+					</td>
+					</tr>
+					<tr><td>
+						<select id="cet-1" class="set" name="zucheng">
+							<option value="0">请选择</option>
+							<option value="kaoqin">考勤</option>
+							<option value="dabian">答辩</option>
+							<option value="zuoye">作业</option>
+							<option value="qizhong">期中考试</option>
+							<option value="qimo">期末考试</option>
+						</select>
+					</td>
+					<td>
+						<select name="xingzhi" class="xz">
+							<option value="0">请选择</option>
+							<option value="pingshen">评审</option>
+							<option value="pingding">评定</option>
+						</select>
+					</td>
+					<td>
+						<input type="text" name="bili"/>%
+					</td>
+					<td>
+						<input type="text" name="cishu" />次
+					</td><td><button type="button" class="btn btn-default jbzcdet">删除</button></td>
+					</tr>
+					<tr>
+						<td rowspan="2" colspan="4">
+						<textarea placeholder="请填写" name="b-shuoming"></textarea>
+						</td>
+						<td><button type="button" class="btn btn-default">修改</button></td>
+					</tr>
+					<tr>
+						<td><button type="button" class="btn btn-default jljbzc_bc">保存</button></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+		<hr />
+		<div id="add-score" class="jiafenx">
+			<button type="button" class="btn btn-default" id="toggle_jfx">+</button>
+			<span>加分项</span>
+			<button type="button" class="btn btn-primary add" id="add-2">添加</button>
+		</div>
+		
+		<div class="t jiafenxdiv">
+			<form class="form-control jfx" id="add-fen-1">
+				<table class="tab-built"><!---->
+					<tr>
+						<td>组成项</td><td>每次加分</td><td>上限</td><td>说明</td><td>总上限</td>
+						<td><button type="button" class="btn btn-default">修改</button></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="zuchengxiang" /></td>
+						<td><input type="text" maxlength="jiafen" /></td>
+						<td><input type="text" name="shangxian" /></td>
+						<td><input type="text" name="b-s" /></td>
+						<td><input type="text" name="all-shangxian" /></td>
+						<td><button type="button" class="btn btn-default jfxdet">删除</button></td>
+					</tr>
+				</table>
+				<p class="kaoqin-btn">
+    				<button class="btn btn-default" type="button">保存</button>
+				</p>
+			</form>
+		</div>
+				
+		
+		<hr/>
+		<div id="say-no">
+			<button type="button" class="btn btn-default" id="toggle_ypfj">+</button>
+			<span>一票否决</span>
+			<button type="button" class="btn btn-primary add "id="add-3">添加</button>
+		</div>
+		<div class="t ypfjdiv">
+			<form class="form-control foujue" id="sayno-1">
+				<table class="tab-built tt"><!---->
+					<tr>
+					<td><input type="checkbox" name="a" value="1" /></td>
+					<td><input type="text" class="txt-shuoming" name="b" /></td>
+					<td><button type="button" class="btn btn-default">修改</button></td>
+					<td><button type="button" class="btn btn-default ypfjdet">删除</button></td>
+					</tr>
+				</table>
+			</form>
+			<p class="kaoqin-btn">
+    			<button class="btn btn-default" type="button">保存</button>
+			</p>
+		</div>
+	</div>
+	<div class="box">
+		<div class="t run_div">
+			<ul class="run-list run-al">
+				<li>组成项</li>
+				<li>性&nbsp;&nbsp;&nbsp;质</li>
+				<li>比&nbsp;&nbsp;&nbsp;例</li>
+				<li>次&nbsp;&nbsp;&nbsp;数</li>
+			</ul>
+			<ul class="run-l run-al run_x run_work">
+				<li><span>作业</span></li>
+				<li><span>评定</span></li>
+				<li><span class="">20</span>%</li>
+				<li><span class="">4</span>次</li>
+			</ul>
+			<ul class="run-l run-al run_x run_dabian">
+				<li><span>答辩</span></li>
+				<li><span>评审</span></li>
+				<li><span class="">20</span>%</li>
+				<li><span class="">4</span>次</li>
+			</ul>
+			<ul class="run-l run-al run_x run_kaoqin">
+				<li><span>考勤</span></li>
+				<li><span>评定</span></li>
+				<li><span class="">20</span>%</li>
+				<li><span class="">4</span>次</li>
+			</ul>
+			<ul class="run-l run-al run_x run_bqks">
+				<li><span>半期考试</span></li>
+				<li><span>评定</span></li>
+				<li><span class="">20</span>%</li>
+				<li><span class="">4</span>次</li>
+			</ul>
+			<ul class="run-l run-al run_x run_qmks">
+				<li><span>期末考试</span></li>
+				<li><span>评定</span></li>
+				<li><span class="">20</span>%</li>
+				<li><span class="">4</span>次</li>
+			</ul>
+		</div>
+		<div class="t cishuBlock">
+			<p class="run_p">
+				<span>第一次</span><span class="">20%</span>
+			</p>
+			<p class="run_p">
+				<span>第二次</span><span class="">20%</span>
+			</p>
+			<p class="run_p">
+				<span>第三次</span><span class="">20%</span>
+			</p>
+			<p class="run_p">
+				<span>第四次</span><span class="">20%</span>
+			</p>
+			
+		</div>
+		<hr/>
+		<div class="t run-box work_box">
+			
+			<form id="work_1" class="zypd">
+			<div class="work">
+			<p class="max_score workBar">满分：<input type="text" class="workScore" name="max_score" /></p>
+			<p class="score_persent workBar">比例：<input type="text" class="workPersent" name="workPersent" /></p>
+				<span>说明：</span>
+				<span><textarea class="txt work_explain" placeholder="题目及说明。。。 " name="work_explain"></textarea></span>
+				<p class="work-input">
+				发布时间：<input type="text" name="launch_time" class="launch_time" />
+				截止时间：<input type="text" name="end_time" class="end_time" />
+				提交方式：<input type="text" name="submit_type" class="submit_type"/>
+				<button type="button" class="btn btn-default sub_workmessage_btn">提交</button>
+				</p>
+				<hr/>
+			</div>
+			</form>
+			
+			<div class="work">
+			<div class="work">
+				<button type="button" class="btn btn-default">+</button>
+				------作业<span>评定</span>-----
+				<button type="button" class="btn btn-default work_result_submit">成绩录入</button>
+				
+			</div>
+			<hr/>
+				<form id="work-s-1" class="slist_1">
+					<table class="tab-built result_sub">
+						<thead>
+							<!-- <tr>
+							<td>姓名</td><td>学号</td><td>未提交</td><td>成绩</td><td>其他说明</td>
+							</tr> -->
+						</thead>
+						<tbody>
+							<!-- <tr>
+								<td><input type="text" class="stu_name input_border"  /></td>
+								<td><input type = "text" class="stu_number input_border"/></td>
+								<td><input type="checkbox" name="" class="stu_ifsubmit"/></td>
+								<td><input type="text" name="" class="stu_score"/></td>
+								<td><input type="text" name="" class="txt-shuoming stu_txt"/></td>
+							</tr> -->
+
+						</tbody>
+					</table>
+					<p class="kaoqin-btn work_btn_bar">
+						<span><button type="button" class="btn btn-default">导入</button></span>
+						<span><button type="button" class="btn btn-default">导出</button></span>
+				 		<span><button type="button" class="btn btn-default work_submit">保存</button></span>
+				 		<span><button type="button" class="btn btn-default">发布</button></span>
+					</p>
+				</form>
+			</div>
+		</div>
+		<div class="t run-box dabian_box">
+			<p class="dabian-cj"><button type="button" class="btn btn-primary">创建答辩</button></p>
+			<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>答辩题目组成</span>
+			</p>
+			</div>
+			<form id="dabian-1" class="db">
+			<div class="dabian">
+				<p class="dabian-xiangmu">
+					<span>满分：<input type="text" /></span>
+					方式：
+					<span>分组<input type="radio"  name="how" value="group" /></span>
+					<span>个人<input type="radio"  name="how" value="personal"/></span>
+				</p>
+			</div>
+			<p class="dabian-timu">...........题目..............<span><button type="button" class="btn btn-default">创建题目</button></span></p>
+			<table class="tab tab_built">
+				<tbody>
+				<tr>
+					<td><span>序号</span></td><td>题目内容</td><td>容量</td><td>操作</td>
+				</tr>
+				<tr>
+					<td rowspan="3"><span>1</span></td><td rowspan="3"><textarea placeholder="题目及内容"></textarea></td>
+					<td rowspan="3"><input type="text" /></td>
+					<td><button type="button" class="btn btn-default">删除</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-default">修改</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-default">保存</button></td>
+				</tr>
+				<!--sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss-->
+				<tr>
+					<td><span>序号</span></td><td>题目内容</td><td>容量</td><td>操作</td>
+				</tr>
+				<tr>
+					<td rowspan="3"><span>2</span></td><td rowspan="3">
+					<textarea placeholder="题目及内容" name="dabian-sm"></textarea></td>
+					<td rowspan="3"><input type="text" /></td>
+					<td><button type="button" class="btn btn-default">删除</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-default">修改</button></td>
+				</tr>
+				<tr>
+					<td><button type="button" class="btn btn-default">保存</button></td>
+				</tr>
+				</tbody>
+			</table>
+			</form>
+			<hr/>
+			<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>人员分组</span>
+			</p>
+			</div>
+			<div class="work">
+			<!--人员分组-->
+			<form id="person-group-1" class="ryfz">
+			<div class="work">
+				<p>
+					<span><input type="radio" name="work-person-group" value="cq" />抽签</span>
+					<span><input type="radio" name="work-person-group" value="sj" />随机</span>
+					<span><input type="radio" name="work-person-group" value="zy" />自由组合</span>
+					<span><input type="radio" name="work-person-group" value="zd" />指定</span>
+				</p>
+				<p class="dabian-person-group">
+					<span>分组数<input type="text" /></span>
+					<span><button type="button" class="btn btn-default">保存</button></span>
+					<span><button type="button" class="btn btn-default">分组</button></span>
+					<span><button type="button" class="btn btn-default">分组结果</button></span>
+					<span><button type="button" class="btn btn-default">发布</button></span>
+				</p>
+			</div>
+			</form>
+			<!--题目分组-->
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>题目分组</span>
+			</p>
+			<form id="timu-group-1" class="tmfz">
+			<div class="work">
+				<p>
+					<span><input type="radio" name="work-timu-group" value="c" />抽签</span>
+					<span><input type="radio" name="work-timu-group" value="s" />随机</span>
+					<span><input type="radio" name="work-timu-group" value="zy" />自由组合</span>
+					<span><input type="radio" name="work-timu-group" value="zd" />指定</span>
+				</p>
+				<p class="dabian-person-group place">
+					
+					<span><button type="button" class="btn btn-default">保存</button></span>
+					<span><button type="button" class="btn btn-default">分组</button></span>
+					<span><button type="button" class="btn btn-default">分组结果</button></span>
+					<span><button type="button" class="btn btn-default">发布</button></span>
+				</p>
+			</div>
+			</form>
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>评审团建立</span>
+			</p>
+			<form id="pingshentuan-1" class="pst">
+			<div class="work">
+				<p class="dabian-tea-stu">
+					<span>教师组</span>
+					<span></span>
+					<span>学生组</span>
+				</p>
+				<div class="pingshentuan">
+				</div>
+				<div class="pingshentuan">
+				</div>
+				<div class="pingshentuan">
+				</div>
+				<div class="pingshentuan">
+				</div>
+				<div class="pingshentuan-bili">
+				 	教师分数比例：<p><input type="text" /></p>
+				 	学生分数比例：<p><input type="text" /></p>
+				 	<p class="pingshentuan-btn">
+				 		<span><button type="button" class="btn btn-default">保存</button></span>
+				 		<span><button type="button" class="btn btn-default">修改</button></span>
+				 	</p>
+				</div>
+			</div>
+			</form>
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>答辩信息</span>
+			</p>
+			<form id="db-xinxi-1" class="dbxx">
+			<div class="work">
+				<p>
+					<span>答辩时间：<input type="text" /></span>
+					<span>答辩地点：<input type="text" /></span>
+				</p>
+				<p class="kaoqin-btn">
+			 		<span><button type="button" class="btn btn-default">保存</button></span>
+			 		<span><button type="button" class="btn btn-default">修改</button></span>
+				</p>
+			</div>
+			</form>
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>答辩规则</span>
+			</p>
+			<form id="db-guize-1" class="dbgz">
+			<div class="work">
+				<p class="kaoqin-btn">
+			 		<span><input type="radio"  name="rule" value="" />百分制</span>
+			 		<span><input type="radio"  name="rule" value="" />等级制</span>
+				</p>
+				<p>
+					<span>缺席人扣分：<input type="text" /></span>
+					<span>答辩人加分：<input type="text" /></span>
+					<span>缺席组扣分：<input type="text" /></span>
+				</p>
+				<p class="kaoqin-btn">
+    				<button class="btn btn-default" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+				</p>
+			</div>
+			</form>
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span>答辩评审</span>
+			</p>
+			<form id="db-ps-1" class="dbps">
+			<div class="work">
+				<p>答辩评审</p>
+				<div class="dabian-pingshen">
+					<p class="dabian-p">1,
+					<span>组号：<input type="text" value="" /></span>
+					<span>成员：<input type="text" value="" /></span>
+					<span>题目：<input type="text" value="" /></span>
+					</p>
+					<p class="dabian-p">
+						<span>分数<input type="text" value="" /></span>
+						<span>备注<input type="text" value="" /></span>
+					</p>
+					<p class="kaoqin-btn">
+    				<button class="btn btn-default" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+					</p>
+				</div>
+				<div class="dabian-pingshen">
+					<p class="dabian-p">2,
+					<span>组号：<input type="text" value="" /></span>
+					<span>成员：<input type="text" value="" /></span>
+					<span>题目：<input type="text" value="" /></span>
+					</p>
+					<p class="dabian-p">
+						<span>分数<input type="text" value="" /></span>
+						<span>备注<input type="text" value="" /></span>
+					</p>
+					<p class="kaoqin-btn">
+    				<button class="btn btn-default" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+					</p>
+				</div>
+			</div>
+			</form>
+			</div>
+		</div>
+		<div class="t run-box kaoqin_box">
+		<!--考勤评定-->
+			<div class="kaoqin">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------考勤<span>评定</span>
+			</p>
+			</div>
+			<form id="kaoqin-pd-1" class="kaoqin">
+			<div class="kaoqin">
+				<p class="work-input">
+				每次扣分：<input type="text" />
+				请假扣分：<input type="text" />
+				</p>
+				<table class="tab tab-built" id="kaoqin-p">
+					<tbody>
+					<tr>
+						<td>姓名</td><td>学号</td><td>正常</td>
+						<td>请假</td><td>迟到</td><td>旷课</td>
+					</tr>
+					<tr>
+						<td><input type="text" /></td><td><input type="text" /></td>
+						<td><input type="checkbox" name="zhengchang" /></td>
+						<td><input type="checkbox" name="qingjia" /></td>
+						<td><input type="checkbox" name="chidao" /></td>
+						<td><input type="checkbox" name="kuangke" /></td>
+					</tr>
+					</tbody>
+				</table>
+				<p class="kaoqin-btn">
+					<td><button type="button" class="btn btn-default">保存</button></td>
+					<td><button type="button" class="btn btn-default">发布</button></td>
+				</p>
+			</div>
+			</form>
+			<hr/>
+			<!--记录修改-->
+			<div class="kaoqin">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------记录<span>修改</span>
+			</p>
+			</div>
+			<form id="jilv-xg-1" class="jlxg">
+			<div class="kaoqin">
+				<p class="work-input">
+				每次扣分：<input type="text" />
+				请假扣分：<input type="text" />
+				</p>
+				<table class="tab tab-built" id="jilu-x">
+					<tbody>
+					<tr>
+						<td>姓名</td><td>学号</td><td>正常</td>
+						<td>请假</td><td>迟到</td><td>旷课</td>
+					</tr>
+					<tr>
+						<td><input type="text" /></td><td><input type="text" /></td>
+						<td><input type="checkbox" name="zhengchang" /></td>
+						<td><input type="checkbox" name="qingjia" /></td>
+						<td><input type="checkbox" name="chidao" /></td>
+						<td><input type="checkbox" name="kuangke" /></td>
+					</tr>
+					</tbody>
+				</table>
+				<p class="kaoqin-btn">
+					<td><button type="button" class="btn btn-default">保存</button></td>
+					<td><button type="button" class="btn btn-default">发布</button></td>
+				</p>
+			</div>
+			</form>
+		</div>
+		<div class="t run-box qizhong_box">
+			<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------阶段测试成绩
+			</p>
+			</div>
+			<form id="qz-cs-1" class="qizhong">
+			<div class="work">
+				<p class="kaoqin-btn">
+				<span><input type="radio" value="" name="rule"/>百分制</span>
+    			<span><input type="radio" value="" name="rule"/>等级制</span>
+				</p>
+				<p>满分<input type="text " class="qzscore" /></p>
+				<table class="tab-built qzTab">
+					<thead>
+					<tr>
+						<td>姓名</td><td>学号</td><td>缺考</td><td>作弊</td><td>正常</td><td>成绩</td>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><input type="text" class="qzStuName"/></td>
+						<td><input type="text" class="qzStuNumber"/></td>
+						<td><input type="radio" name="ifgood_1" value="1" /></td>
+						<td><input type="radio" name="ifgood_1" value="2" /></td>
+						<td><input type="radio" name="ifgood_1" value="3" /></td>
+						<td><input type="text" class="qz_core" /></td>
+					</tr>
+					</tbody>
+				</table>
+				<p class="kaoqin-btn">
+    				<button class="btn btn-default qzbc_btn" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+				</p>
+			</div>
+			</form>
+			<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------考试资格
+			</p>
+			</div>
+			<form id="qz-kszg-1" class="qzkszg">
+			<div class="work">
+				<table class="tab-built">
+					<thead>
+						<tr>
+							<td>姓名</td><td>学号</td><td>考试资格</td><td>说明</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" name=""/></td>
+							<td><input type="text" name=""/></td>
+							<td><input type="checkbox" name=""/></td>
+							<td><input type="text" name=""/></td>
+						</tr>
+						<tr>
+							<td><input type="text" name=""/></td>
+							<td><input type="text" name=""/></td>
+							<td><input type="checkbox" name=""/></td>
+							<td><input type="text" name=""/></td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="kaoqin-btn">
+    				<button class="btn btn-default" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+				</p>
+			</div>
+			</form>
+		</div>	
+		<div class="t run-box qimo_box">
+			<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------期末成绩
+			</p>
+			</div>
+			<form id="qmcj-1" class="qimocj">
+			<div class="work">
+				<p class="kaoqin-btn">
+				<span><input type="radio" value="" name="rule">百分制</span>
+    			<span><input type="radio" value="" name="rule">等级制</span>
+				</p>
+				<p>满分<input type="text" class="qm_score" /></p>
+				<table class="tab-built qmTab">
+					<thead>
+					<tr>
+						<td>姓名</td><td>学号</td><td>缺考</td><td>作弊</td><td>正常</td><td>成绩</td>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><input type="text" class="qmStuName"/></td>
+						<td><input type="text" class="qmStuNumber"/></td>
+						<td><input type="radio" name="ifgood-1" value="1"/></td>
+						<td><input type="radio" name="ifgood-1" value="2"/></td>
+						<td><input type="radio" name="ifgood-1" value="3"/></td>
+						<td><input type="text" class="qm_core"/></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="" /></td>
+						<td><input type="text" name="" /></td>
+						<td><input type="radio" name="ifgood-2" /></td>
+						<td><input type="radio" name="ifgood-2" /></td>
+						<td><input type="radio" name="ifgood-2" /></td>
+						<td><input type="text" name="" /></td>
+					</tr>
+					</tbody>
+				</table>
+				<p class="kaoqin-btn">
+    				<button class="btn btn-default qmbc_btn" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+				</p>
+			</div>
+			</form>
+			<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------考试资格
+			</p>
+			</div>	
+			<form id="qm-kszg-1" class="qmkszg">
+			<div class="work">
+				<table class="tab-built">
+					<thead>
+						<tr>
+							<td>姓名</td><td>学号</td><td>考试资格</td><td>说明</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" name=""/></td>
+							<td><input type="text" name=""/></td>
+							<td><input type="checkbox" name=""/></td>
+							<td><input type="text" name=""/></td>
+						</tr>
+						<tr>
+							<td><input type="text" name=""/></td>
+							<td><input type="text" name=""/></td>
+							<td><input type="checkbox" name=""/></td>
+							<td><input type="text" name=""/></td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="kaoqin-btn">
+    				<button class="btn btn-default" type="button">保存</button>
+    				<button class="btn btn-default" type="button">发布</button>
+				</p>
+			</div>
+			</form>
+		</div>
+	</div>
+	<div class="box">
+	<form id="r-a-1" class="r">
+		<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span value="">离散数学</span>
+			</p>
+		</div>
+		<div class="work">
+			<table class="tab_built result_tab">
+			<thead>
+				<tr>
+					<td>姓名</td><td>学号</td><td>成绩</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><p class = "stuName">21</p></td>
+					<td><p class = "stuNumber">321</p></td>
+					<!--<td><p class = "stuClass">321</p></td>-->
+					<td><p class = "stuResult">321</p></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</form>
+	<!--
+	<hr/>
+	<form id="r-b-1">
+		<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span value="">线性代数</span>
+			</p>
+		</div>
+		<div class="work">
+			<table class="tab-built">
+			<thead>
+				<tr>
+					<td>姓名</td><td>学号</td><td>班级</td><td>成绩</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="text" name="" /></td>
+					<td><input type="text" name="" /></td>
+					<td><input type="text" name="" /></td>
+					<td><input type="text" name="" /></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</form>
+	<hr/>
+	<form id="r-c-1">
+		<div class="work">
+			<p>
+			<button type="button" class="btn btn-default">+</button>
+			--------------<span value="">高等数学</span>
+			</p>
+		</div>
+		<div class="work">
+			<table class="tab-built">
+			<thead>
+				<tr>
+					<td>姓名</td><td>学号</td><td>班级</td><td>成绩</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="text" name="" /></td>
+					<td><input type="text" name="" /></td>
+					<td><input type="text" name="" /></td>
+					<td><input type="text" name="" /></td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</form>
+	<hr/>
+	-->
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index_data.js"></script>
+</html>
+
